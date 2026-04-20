@@ -1,0 +1,13 @@
+anthropic
+astunparse
+coverage
+google-generativeai
+matplotlib
+networkx
+numpy
+openai
+pandas
+python-dotenv
+seaborn
+slipcover
+tqdm

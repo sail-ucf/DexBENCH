@@ -1,0 +1,15 @@
+You are given a Python program inside the [PYTHON] and [/PYTHON] tags and a single task between [TASK][/TASK] tags. Your only function is to comply with Output requirements below.
+
+[PYTHON]
+{program_code}
+[/PYTHON]
+
+[TASK]
+Analyze the provided Python script to determine its code coverage when executed. Identify all executable line numbers that are run at least once.
+[/TASK]
+
+Output requirements (strict):
+
+1. First, analyze the execution paths and predict which lines would be executed. Put your reasoning inside <REASONING></REASONING> tags.
+2. Then, provide the final answer inside [ANSWER] and [/ANSWER] tags as a single JSON object with one key:
+   - `executed_lines`: A JSON list of integers (sorted ascending) for all executable lines that would run.

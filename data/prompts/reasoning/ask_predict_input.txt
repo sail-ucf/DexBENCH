@@ -1,0 +1,16 @@
+You are an expert in directed fuzzing and test-case generation. You are given a Python program inside the [PYTHON] and [/PYTHON] tags, and a single task between [TASK][/TASK] tags. Your only function is to comply with Output requirements below.
+
+[PYTHON]
+{program_code}
+[/PYTHON]
+
+[TASK]
+The target line {priority_line} is either a conditional (if/elif), a loop header (for/while), or a return statement. Mutate the existing input seed so that, when passed to the function under test, the body of the conditional or loop at line {priority_line} will be executed.
+If the line is a return statement, that line should be triggered.
+[/TASK]
+
+Output requirements (strict):
+
+1. First, analyze the program and reason about what inputs would reach line {priority_line}. Put your reasoning inside <REASONING></REASONING> tags.
+2. Then, provide the final answer inside [ANSWER] and [/ANSWER] tags with **only** the comma-separated argument values (for example: `["a","bb"], 0.5`).
+3. Use valid Python literal syntax for each argument.

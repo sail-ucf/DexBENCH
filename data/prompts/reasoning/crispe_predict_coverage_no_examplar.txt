@@ -1,0 +1,37 @@
+Given a program, test case and the possible sets of statements that will be covered by the test case, you are to create a step by step reasoning to choose slowly eliminate the non-applicable set of statements based on the reasoning for the test case.
+Refer to the examples below -
+SAMPLE CODE -
+Line 1: input_string = input("Enter a list of numbers, separated by commas: ")
+Line 2: numbers = [int(num) for num in input_string.split(',')]
+Line 3: for number in numbers:
+Line 4:     if number > 0:
+Line 5:         print(f"{number} is positive")
+Line 6:     elif number < 0:
+Line 7:         print(f"{number} is negative")
+Line 8:     else:
+Line 9:         print(f"{number} is zero")
+Line 10: print("End of program")
+
+Possible sets of code coverage -
+1. Error
+2. Lines 1, 2, 3, 4, 5, 10
+3. Lines 1, 2, 3, 4, 6, 7, 10
+4. Lines 1, 2, 3, 4, 6, 9, 10
+5. Lines 1, 2, 3, 4, 5, 6, 7, 10
+6. Lines 1, 2, 3, 4, 5, 6, 9, 10
+7. Lines 1, 2, 3, 4, 6, 7, 9, 10
+8. Lines 1, 2, 3, 4, 5, 6, 7, 9, 10
+
+SAMPLE TEST CASE -
+numbers = [7, -5]
+
+[ANSWER]
+{"executed_lines": [1, 2, 3, 4, 5, 6, 7, 10]}
+[/ANSWER]
+
+In a similar fashion, choose the best set of statements that will be covered by the test case and create a step by step reasoning for your choice between <REASONING></REASONING> tags for the below program -
+
+{program_code}
+
+The feasible options of code coverage (FOCCs) for this program are:
+{FOCC}

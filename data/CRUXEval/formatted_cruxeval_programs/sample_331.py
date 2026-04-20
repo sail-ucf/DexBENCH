@@ -1,0 +1,11 @@
+import unittest
+
+def f(strand, zmnc):
+    poz = strand.find(zmnc)
+    while poz != -1:
+        strand = strand[poz + 1:]
+        poz = strand.find(zmnc)
+    return strand.rfind(zmnc)
+
+
+unittest.TestCase().assertEqual(f('', 'abc'), -1)

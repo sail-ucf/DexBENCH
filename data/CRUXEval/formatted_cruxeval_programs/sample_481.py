@@ -1,0 +1,13 @@
+import unittest
+
+def f(values, item1, item2):
+    if values[-1] == item2:
+        if values[0] not in values[1:]:
+            values.append(values[0])
+    elif values[-1] == item1:
+        if values[0] == item2:
+            values.append(values[0])
+    return values
+
+
+unittest.TestCase().assertEqual(f([1, 1], 2, 3), [1, 1])
