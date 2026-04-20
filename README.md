@@ -40,3 +40,5 @@ python src/preparation/focc_generator.py
 ```
 
 Then run the desired API caller and matching evaluation script.
+
+If anything appears missing or unclear, please open an issue. We are happy to improve the release.
